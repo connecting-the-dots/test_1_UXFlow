@@ -10,10 +10,19 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.widget.ImageView;
 
+import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.accountswitcher.AccountHeader;
+import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.mikepenz.materialdrawer.util.DrawerImageLoader;
 import com.squareup.picasso.Picasso;
 
 public class MainApplication extends Application {
+
+
+  //save our header or result
+  public static AccountHeader headerResult = null;
+  public static Drawer result = null;
+  public static IProfile profile;
 
   @Override
   public void onCreate() {
