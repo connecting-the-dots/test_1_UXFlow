@@ -4,16 +4,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
-    <string-array name="drawer_items_array">
-        <item>Dashboard</item>
-        <item>Focus</item>
-        <item>Kick</item>
-        <item>Timeline</item>
-        <item>Overview</item>
-        <item>Profile</item>
-        <item>Logout</item>
-    </string-array>
-    <string name="drawer_open">Open navigation drawer</string>
-    <string name="drawer_close">Close navigation drawer</string>
+
+    <string name="drawer_item_custom">Custom</string>
+    <string name="drawer_item_settings">Settings</string>
 
 </resources>
