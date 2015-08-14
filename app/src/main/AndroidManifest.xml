@@ -24,6 +24,23 @@
             android:name=".FocusActivity"
             android:label="@string/drawer_item_focus"
             android:theme="@style/MaterialDrawerTheme.TranslucentStatus"/>
+        <activity
+            android:name=".KickActivity"
+            android:label="@string/drawer_item_kick"
+            android:theme="@style/MaterialDrawerTheme.TranslucentStatus"/>
+        <activity
+            android:name=".TimelineActivity"
+            android:label="@string/drawer_item_timeline"
+            android:theme="@style/MaterialDrawerTheme.TranslucentStatus"/>
+        <activity
+            android:name=".OverviewActivity"
+            android:label="@string/drawer_item_overview"
+            android:theme="@style/MaterialDrawerTheme.TranslucentStatus"/>
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/drawer_item_profile"
+            android:theme="@style/MaterialDrawerTheme.TranslucentStatus"/>
+
 
     </application>
 

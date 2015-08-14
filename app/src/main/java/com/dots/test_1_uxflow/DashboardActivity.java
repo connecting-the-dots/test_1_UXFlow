@@ -100,15 +100,15 @@ public class DashboardActivity extends AppCompatActivity {
             } else if (drawerItem.getIdentifier() == 1) {
               intent = new Intent(DashboardActivity.this, FocusActivity.class);
             } else if (drawerItem.getIdentifier() == 2) {
-//              intent = new Intent(MainActivity.this, MainActivity.class);
+              intent = new Intent(DashboardActivity.this, KickActivity.class);
             } else if (drawerItem.getIdentifier() == 3) {
-//              intent = new Intent(MainActivity.this, MainActivity.class);
+              intent = new Intent(DashboardActivity.this, TimelineActivity.class);
             } else if (drawerItem.getIdentifier() == 4) {
-//              intent = new Intent(MainActivity.this, MainActivity.class);
+              intent = new Intent(DashboardActivity.this, OverviewActivity.class);
             } else if (drawerItem.getIdentifier() == 5) {
-//              intent = new Intent(MainActivity.this, MainActivity.class);
+              intent = new Intent(DashboardActivity.this, ProfileActivity.class);
             } else if (drawerItem.getIdentifier() == 6) {
-//              intent = new Intent(MainActivity.this, MainActivity.class);
+//              intent = new Intent(DashboardActivity.this, MainActivity.class);
             } else if (drawerItem.getIdentifier() == 7) {
               intent = new LibsBuilder()
                 .withFields(R.string.class.getFields())
@@ -172,7 +172,11 @@ public class DashboardActivity extends AppCompatActivity {
     if (MainApplication.result != null && MainApplication.result.isDrawerOpen()) {
       MainApplication.result.closeDrawer();
     } else {
-      super.onBackPressed();
+//      super.onBackPressed();
+      Intent a = new Intent(Intent.ACTION_MAIN);
+      a.addCategory(Intent.CATEGORY_HOME);
+      a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+      startActivity(a);
     }
   }
 }

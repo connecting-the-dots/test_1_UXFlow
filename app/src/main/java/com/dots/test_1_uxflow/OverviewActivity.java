@@ -17,7 +17,6 @@ import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.accountswitcher.AccountHeader;
 import com.mikepenz.materialdrawer.accountswitcher.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
-import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
@@ -25,12 +24,12 @@ import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 /**
  * Created by AdrianHsu on 15/8/14.
  */
-public class FocusActivity extends AppCompatActivity {
+public class OverviewActivity extends AppCompatActivity {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_focus);
+    setContentView(R.layout.activity_overview);
 
     // Handle Toolbar
     Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -91,27 +90,27 @@ public class FocusActivity extends AppCompatActivity {
           if (drawerItem != null) {
             Intent intent = null;
             if (drawerItem.getIdentifier() == 0) {
-              intent = new Intent(FocusActivity.this, DashboardActivity.class);
+              intent = new Intent(OverviewActivity.this, DashboardActivity.class);
             } else if (drawerItem.getIdentifier() == 1) {
-//              intent = new Intent(FocusActivity.this, FocusActivity.class);
+              intent = new Intent(OverviewActivity.this, FocusActivity.class);
             } else if (drawerItem.getIdentifier() == 2) {
-              intent = new Intent(FocusActivity.this, KickActivity.class);
+              intent = new Intent(OverviewActivity.this, KickActivity.class);
             } else if (drawerItem.getIdentifier() == 3) {
-              intent = new Intent(FocusActivity.this, TimelineActivity.class);
+              intent = new Intent(OverviewActivity.this, TimelineActivity.class);
             } else if (drawerItem.getIdentifier() == 4) {
-              intent = new Intent(FocusActivity.this, OverviewActivity.class);
+//              intent = new Intent(OverviewActivity.this, OverviewActivity.class);
             } else if (drawerItem.getIdentifier() == 5) {
-              intent = new Intent(FocusActivity.this, ProfileActivity.class);
+              intent = new Intent(OverviewActivity.this, ProfileActivity.class);
             } else if (drawerItem.getIdentifier() == 6) {
 //              intent = new Intent(DashboardActivity.this, MainActivity.class);
             } else if (drawerItem.getIdentifier() == 7) {
               intent = new LibsBuilder()
                 .withFields(R.string.class.getFields())
                 .withActivityStyle(Libs.ActivityStyle.LIGHT_DARK_TOOLBAR)
-                .intent(FocusActivity.this);
+                .intent(OverviewActivity.this);
             }
             if (intent != null) {
-              FocusActivity.this.startActivity(intent);
+              OverviewActivity.this.startActivity(intent);
             }
           }
 
@@ -121,7 +120,7 @@ public class FocusActivity extends AppCompatActivity {
       })
       .withAnimateDrawerItems(true)
       .withSavedInstance(savedInstanceState)
-      .withSelectedItem(1)
+      .withSelectedItem(4)
       .build();
   }
   /**
@@ -167,8 +166,8 @@ public class FocusActivity extends AppCompatActivity {
     if (MainApplication.result != null && MainApplication.result.isDrawerOpen()) {
       MainApplication.result.closeDrawer();
     } else {
-      Intent intent = new Intent(FocusActivity.this, DashboardActivity.class);
-      FocusActivity.this.startActivity(intent);
+      Intent intent = new Intent(OverviewActivity.this, DashboardActivity.class);
+      OverviewActivity.this.startActivity(intent);
     }
   }
 }
