@@ -24,6 +24,7 @@
             android:name=".FocusActivity"
             android:label="@string/drawer_item_focus"
             android:theme="@style/MaterialDrawerTheme.TranslucentStatus"/>
+
         <activity
             android:name=".KickActivity"
             android:label="@string/drawer_item_kick"

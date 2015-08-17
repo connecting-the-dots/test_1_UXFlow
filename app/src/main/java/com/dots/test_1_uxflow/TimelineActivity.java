@@ -4,6 +4,7 @@ package com.dots.test_1_uxflow;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
@@ -26,6 +27,11 @@ import com.mikepenz.materialdrawer.model.interfaces.IProfile;
  */
 public class TimelineActivity extends AppCompatActivity {
 
+  private RecyclerView mRecyclerView;
+  private RecyclerView.Adapter mAdapter;
+  private RecyclerView.LayoutManager mLayoutManager;
+
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -38,6 +44,7 @@ public class TimelineActivity extends AppCompatActivity {
     // Create the AccountHeader
     buildHeader(false, savedInstanceState);
     buildDrawer(toolbar, savedInstanceState);
+
   }
 
   private void buildDrawer(Toolbar toolbar, Bundle savedInstanceState) {
@@ -170,4 +177,5 @@ public class TimelineActivity extends AppCompatActivity {
       TimelineActivity.this.startActivity(intent);
     }
   }
+
 }

@@ -124,6 +124,11 @@ public class FocusActivity extends AppCompatActivity {
       .withSelectedItem(1)
       .build();
   }
+  public void onTimelineClick(View view) {
+    Intent it = new Intent(this, TimelineActivity.class);
+    startActivity(it);
+  }
+
   /**
    * small helper method to reuse the logic to build the AccountHeader
    * this will be used to replace the header of the drawer with a compact/normal header
